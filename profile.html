@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Profile</title>
+    
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>Resume & Profile</h1>
+
+
+    <form method="POST">
+
+
+        <label>Resume Google Drive Link</label>
+
+        <br>
+
+        <input type="url"
+               name="resume"
+               placeholder="Paste Resume Link">
+
+        <br><br>
+
+
+        <label>LinkedIn Profile</label>
+
+        <br>
+
+        <input type="url"
+               name="linkedin"
+               placeholder="Paste LinkedIn Link">
+
+        <br><br>
+
+
+        <label>Portfolio Link</label>
+
+        <br>
+
+        <input type="url"
+               name="portfolio"
+               placeholder="Paste Portfolio Link">
+
+        <br><br>
+
+
+        <button type="submit">
+            Save Profile
+        </button>
+
+
+    </form>
+
+
+    <br>
+
+    <a href="/dashboard">
+        Dashboard
+    </a>
+
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Interviews</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>My Interview Schedule</h1>
+
+
+    <table>
+
+        <tr>
+
+            <th>Company</th>
+
+            <th>Date</th>
+
+            <th>Time</th>
+
+            <th>Round</th>
+
+            <th>Mode</th>
+
+        </tr>
+
+
+        {% for interview in interviews %}
+
+        <tr>
+
+            <td>
+                {{ interview.company }}
+            </td>
+
+            <td>
+                {{ interview.date }}
+            </td>
+
+            <td>
+                {{ interview.time }}
+            </td>
+
+            <td>
+                {{ interview.round }}
+            </td>
+
+            <td>
+                {{ interview.mode }}
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+    <br>
+
+<!-- 
+    <a href="/add_interview">
+        ➕ Add Interview
+    </a>
+ -->
+
+    <a href="/dashboard">
+        🏠 Dashboard
+    </a>
+
+</div>
+
+</body>
+
+</html>

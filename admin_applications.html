@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Manage Applications</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📋 All Internship Applications</h1>
+
+
+    <table>
+
+        <tr>
+
+            <th>Student</th>
+
+            <th>Email</th>
+
+            <th>Company</th>
+
+            <th>Position</th>
+
+            <th>Date</th>
+
+            <th>Package</th>
+
+            <th>Location</th>
+
+            <th>Status</th>
+
+            <th>Action</th>
+
+        </tr>
+
+
+        {% for application in applications %}
+
+        <tr>
+
+            <td>
+                {{ application.student_name }}
+            </td>
+
+            <td>
+                {{ application.student_email }}
+            </td>
+
+            <td>
+                {{ application.company }}
+            </td>
+
+            <td>
+                {{ application.position }}
+            </td>
+
+            <td>
+                {{ application.date }}
+            </td>
+
+            <td>
+                {{ application.package }}
+            </td>
+
+            <td>
+                {{ application.location }}
+            </td>
+
+            <td>
+                {{ application.status }}
+            </td>
+
+            <td>
+
+                <a href="/admin/manage/{{ application.id }}">
+
+                    Manage Status
+
+                </a>
+
+
+                <br>
+
+
+                <a href="/admin/interview/{{ application.id }}">
+
+                    Schedule Interview
+
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+    <br>
+
+
+    <a href="/admin/dashboard">
+
+        🏠 Admin Dashboard
+
+    </a>
+
+</div>
+
+</body>
+
+</html>

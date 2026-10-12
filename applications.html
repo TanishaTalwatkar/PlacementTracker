@@ -1,0 +1,208 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Applications</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>My Internship Applications</h1>
+
+
+    <table>
+
+        <tr>
+
+            <th>Company</th>
+
+            <th>Position</th>
+
+            <th>Date</th>
+
+            <th>Package</th>
+
+            <th>Location</th>
+
+            <th>Status</th>
+
+            <th>Action</th>
+
+        </tr>
+
+
+        {% for application in applications %}
+
+        <tr>
+
+            <td>
+                {{ application.company }}
+            </td>
+
+            <td>
+                {{ application.position }}
+            </td>
+
+            <td>
+                {{ application.date }}
+            </td>
+
+            <td>
+                {{ application.package }}
+            </td>
+
+            <td>
+                {{ application.location }}
+            </td>
+
+            <td>
+                {{ application.status }}
+            </td>
+
+            <td>
+
+                <a href="/edit/{{ application.id }}">
+                    Edit
+                </a>
+
+                <a href="/delete/{{ application.id }}">
+                    Delete
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+    <br>
+
+
+    <a href="/add">
+        ➕ Add Application
+    </a>
+
+
+    <a href="/dashboard">
+        🏠 Dashboard
+    </a>
+
+</div>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Applications</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📋 My Applications</h1>
+
+
+    <table>
+
+        <tr>
+
+            <th>Company</th>
+
+            <th>Position</th>
+
+            <th>Date</th>
+
+            <th>Package</th>
+
+            <th>Location</th>
+
+            <th>Status</th>
+
+        </tr>
+
+
+        {% for application in applications %}
+
+        <tr>
+
+            <td>
+                {{ application.company }}
+            </td>
+
+            <td>
+                {{ application.position }}
+            </td>
+
+            <td>
+                {{ application.date }}
+            </td>
+
+            <td>
+                {{ application.package }}
+            </td>
+
+            <td>
+                {{ application.location }}
+            </td>
+
+            <td>
+                <strong>
+                    {{ application.status }}
+                </strong>
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+    <br>
+
+<!-- 
+    <a href="/add">
+
+        ➕ Add Application
+
+    </a> -->
+
+
+    <a href="/interviews">
+
+        🎯 My Interviews
+
+    </a>
+
+
+    <a href="/dashboard">
+
+        🏠 Dashboard
+
+    </a>
+
+</div>
+
+</body>
+
+</html>

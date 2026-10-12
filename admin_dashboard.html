@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>👨‍💼 Admin Dashboard</h1>
+
+    <h2>
+        Welcome, {{ admin_name }}
+    </h2>
+
+
+    <div class="dashboard-cards">
+
+
+        <div class="card">
+
+            <h3>Total Students</h3>
+
+            <h2>
+                {{ total_students }}
+            </h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Total Applications</h3>
+
+            <h2>
+                {{ total_applications }}
+            </h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Shortlisted</h3>
+
+            <h2>
+                {{ shortlisted }}
+            </h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Interview Scheduled</h3>
+
+            <h2>
+                {{ interview_scheduled }}
+            </h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Selected</h3>
+
+            <h2>
+                {{ selected }}
+            </h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Rejected</h3>
+
+            <h2>
+                {{ rejected }}
+            </h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Total Interviews</h3>
+
+            <h2>
+                {{ total_interviews }}
+            </h2>
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <h2>Admin Controls</h2>
+
+
+    <div class="menu">
+
+        <a href="/admin/students">
+
+            👨‍🎓 View Students
+
+        </a>
+
+
+        <a href="/admin/applications">
+
+            📋 Manage Applications
+
+        </a>
+
+
+        <a href="/admin/logout">
+
+            🚪 Admin Logout
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Dashboard</h1>
+
+    <h2>
+        Welcome, {{ name }} 👋
+    </h2>
+
+
+    <div class="dashboard-cards">
+
+
+        <div class="card">
+
+            <h3>Total Applications</h3>
+
+            <h2>
+                {{ total_applications }}
+            </h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Selected</h3>
+
+            <h2>
+                {{ selected }}
+            </h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Rejected</h3>
+
+            <h2>
+                {{ rejected }}
+            </h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Pending</h3>
+
+            <h2>
+                {{ pending }}
+            </h2>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Interviews</h3>
+
+            <h2>
+                {{ interview_count }}
+            </h2>
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <h2>Quick Actions</h2>
+
+
+    <div class="menu">
+
+
+        <a href="/applications">
+            📋 My Applications
+        </a>
+
+
+        <a href="/add">
+            ➕ Add Application
+        </a>
+
+
+        <a href="/interviews">
+            🎯 My Interviews
+        </a>
+
+<!-- 
+        <a href="/add_interview">
+            ➕ Add Interview
+        </a> -->
+
+
+        <a href="/profile">
+            📄 Resume & Profile
+        </a>
+
+
+        <a href="/logout">
+            🚪 Logout
+        </a>
+
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

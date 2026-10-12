@@ -1,0 +1,171 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f6f8;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+}
+
+
+h1 {
+
+    text-align: center;
+
+}
+
+
+h2 {
+
+    text-align: center;
+
+}
+
+
+form {
+
+    max-width: 500px;
+
+    margin: auto;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 5px;
+
+    box-sizing: border-box;
+
+}
+
+
+button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 20px;
+
+    cursor: pointer;
+
+}
+
+
+a {
+
+    display: inline-block;
+
+    padding: 10px 15px;
+
+    margin: 5px;
+
+    text-decoration: none;
+
+}
+
+
+.menu {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+}
+
+
+.dashboard-cards {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    justify-content: center;
+
+    margin: 30px 0;
+
+}
+
+
+.card {
+
+    width: 180px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+}
+
+
+th,
+td {
+
+    border: 1px solid #ddd;
+
+    padding: 12px;
+
+    text-align: center;
+
+}
+
+
+th {
+
+    font-weight: bold;
+
+}

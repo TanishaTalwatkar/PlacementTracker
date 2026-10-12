@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Schedule Interview</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎯 Schedule Interview</h1>
+
+
+    <h2>Student Details</h2>
+
+
+    <p>
+
+        <strong>Name:</strong>
+
+        {{ student.name }}
+
+    </p>
+
+
+    <p>
+
+        <strong>Email:</strong>
+
+        {{ student.email }}
+
+    </p>
+
+
+    <hr>
+
+
+    <h2>Application</h2>
+
+
+    <p>
+
+        <strong>Company:</strong>
+
+        {{ application.company }}
+
+    </p>
+
+
+    <p>
+
+        <strong>Position:</strong>
+
+        {{ application.position }}
+
+    </p>
+
+
+    <hr>
+
+
+    <form method="POST">
+
+
+        <label>Interview Date</label>
+
+
+        <input
+            type="date"
+            name="date"
+            required
+        >
+
+
+        <label>Interview Time</label>
+
+
+        <input
+            type="time"
+            name="time"
+            required
+        >
+
+
+        <label>Interview Round</label>
+
+
+        <select name="round">
+
+
+            <option value="HR">
+
+                HR Round
+
+            </option>
+
+
+            <option value="Technical">
+
+                Technical Round
+
+            </option>
+
+
+            <option value="Managerial">
+
+                Managerial Round
+
+            </option>
+
+
+            <option value="Final">
+
+                Final Round
+
+            </option>
+
+
+        </select>
+
+
+        <label>Interview Mode</label>
+
+
+        <select name="mode">
+
+
+            <option value="Online">
+
+                Online
+
+            </option>
+
+
+            <option value="Offline">
+
+                Offline
+
+            </option>
+
+
+        </select>
+
+
+        <button type="submit">
+
+            Schedule Interview
+
+        </button>
+
+
+    </form>
+
+
+    <br>
+
+
+    <a href="/admin/applications">
+
+        ← Back to Applications
+
+    </a>
+
+</div>
+
+</body>
+
+</html>

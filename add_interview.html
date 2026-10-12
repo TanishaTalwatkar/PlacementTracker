@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Add Interview</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Schedule Interview</h1>
+
+
+    <form method="POST">
+
+
+        <label>Company</label>
+
+        <input type="text"
+               name="company"
+               required>
+
+
+        <label>Interview Date</label>
+
+        <input type="date"
+               name="date"
+               required>
+
+
+        <label>Interview Time</label>
+
+        <input type="time"
+               name="time"
+               required>
+
+
+        <label>Round</label>
+
+        <select name="round">
+
+            <option>HR</option>
+
+            <option>Technical</option>
+
+            <option>Managerial</option>
+
+            <option>Final</option>
+
+        </select>
+
+
+        <label>Mode</label>
+
+        <select name="mode">
+
+            <option>Online</option>
+
+            <option>Offline</option>
+
+        </select>
+
+
+        <button type="submit">
+            Save Interview
+        </button>
+
+
+    </form>
+
+
+    <br>
+
+    <a href="/dashboard">
+        Dashboard
+    </a>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>All Students</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>👨‍🎓 Registered Students</h1>
+
+
+    <table>
+
+        <tr>
+
+            <th>Name</th>
+
+            <th>Email</th>
+
+            <th>Course</th>
+
+        </tr>
+
+
+        {% for student in students %}
+
+        <tr>
+
+            <td>
+                {{ student.name }}
+            </td>
+
+            <td>
+                {{ student.email }}
+            </td>
+
+            <td>
+                {{ student.course }}
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+    <br>
+
+
+    <a href="/admin/dashboard">
+
+        🏠 Admin Dashboard
+
+    </a>
+
+
+    <a href="/admin/applications">
+
+        📋 Applications
+
+    </a>
+
+</div>
+
+</body>
+
+</html>

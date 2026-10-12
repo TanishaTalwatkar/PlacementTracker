@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Manage Application</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Manage Application</h1>
+
+
+    <h2>Student Information</h2>
+
+    <p>
+
+        <strong>Name:</strong>
+
+        {{ student.name }}
+
+    </p>
+
+
+    <p>
+
+        <strong>Email:</strong>
+
+        {{ student.email }}
+
+    </p>
+
+
+    <p>
+
+        <strong>Course:</strong>
+
+        {{ student.course }}
+
+    </p>
+
+
+    <hr>
+
+
+    <h2>Application Information</h2>
+
+
+    <p>
+
+        <strong>Company:</strong>
+
+        {{ application.company }}
+
+    </p>
+
+
+    <p>
+
+        <strong>Position:</strong>
+
+        {{ application.position }}
+
+    </p>
+
+
+    <p>
+
+        <strong>Application Date:</strong>
+
+        {{ application.date }}
+
+    </p>
+
+
+    <p>
+
+        <strong>Current Status:</strong>
+
+        {{ application.status }}
+
+    </p>
+
+
+    <hr>
+
+
+    <h2>Update Status</h2>
+
+
+    <form method="POST">
+
+
+        <label>
+
+            Application Status
+
+        </label>
+
+
+        <select name="status">
+
+
+            <option
+                value="Applied"
+                {% if application.status == "Applied" %}
+                selected
+                {% endif %}
+            >
+
+                Applied
+
+            </option>
+
+
+            <option
+                value="Shortlisted"
+                {% if application.status == "Shortlisted" %}
+                selected
+                {% endif %}
+            >
+
+                Shortlisted
+
+            </option>
+
+
+            <option
+                value="Interview Scheduled"
+                {% if application.status == "Interview Scheduled" %}
+                selected
+                {% endif %}
+            >
+
+                Interview Scheduled
+
+            </option>
+
+
+            <option
+                value="Selected"
+                {% if application.status == "Selected" %}
+                selected
+                {% endif %}
+            >
+
+                Selected
+
+            </option>
+
+
+            <option
+                value="Rejected"
+                {% if application.status == "Rejected" %}
+                selected
+                {% endif %}
+            >
+
+                Rejected
+
+            </option>
+
+
+        </select>
+
+
+        <button type="submit">
+
+            Update Status
+
+        </button>
+
+
+    </form>
+
+
+    <br>
+
+
+    <a href="/admin/applications">
+
+        ← Back to Applications
+
+    </a>
+
+</div>
+
+</body>
+
+</html>
